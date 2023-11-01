@@ -1,0 +1,51 @@
+body {
+  background-color: skyblue;
+}
+.parents {
+  background-color: red;
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.parents > div {
+  margin: 30px;
+  padding: 20px;
+}
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 20vw;
+  height: auto;
+  border-radius: 30%;
+  padding: 20px;
+  animation: circular 5s linear;
+
+  background-color: black;
+}
+@keyframes circular {
+  0% {
+    transform: translateX(100px) translateY(100px) rotate(90deg);
+  }
+  25% {
+    transform: translateX(50px) translateY(-200px) rotate(180deg);
+  }
+  50% {
+    transform: translateX(300px) translateY(100px) rotate(270deg);
+  }
+  75% {
+    transform: translateX(-500px) translateY(-300px) rotate(70deg);
+  }
+  100% {
+    transform: translateX(0) translateY(0) rotate(360deg);
+  }
+}
+
+.parents div > p {
+  color: rgba(255, 230, 220, 0.5);
+  transition: 5s;
+  transform: rotate(360deg);
+}
